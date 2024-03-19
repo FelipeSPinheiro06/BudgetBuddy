@@ -40,7 +40,7 @@ public class CategoriaController {
     }
 
     @PostMapping
-    @ResponseStatus(CREATED)
+    @ResponseStatus(code = CREATED)
     public Categoria create(@RequestBody Categoria categoria){ 
         log.info("cadastrando categoria " + categoria);
         return repository.save(categoria);
